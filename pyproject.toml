@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "multizip"
+version = "0.1.0"
+description = ""
+authors = ["fuji44"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^7.1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+
+[tool.poetry.scripts]
+mzip = "multizip.mzip:cli"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
