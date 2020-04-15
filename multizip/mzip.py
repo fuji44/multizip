@@ -2,10 +2,13 @@ import sys, os, click, glob, shutil
 from pathlib import Path
 
 @click.command()
-@click.argument('pathname')
-@click.option('-o', '--output', default=os.getcwd(), help='Specify the output path')
-def cli(pathname, output):
-    for target in get_dirs(Path(pathname)):
+@click.argument('target_dir')
+@click.option('-o', '--output', default=os.getcwd(), help='Specify the output path. default is current directory.')
+def cli(target_dir, output):
+    """
+    Create a separate zip file based on the directory directly under the target directory.
+    """
+    for target in get_dirs(Path(target_dir)):
         create_zip(target, output)
 
 
