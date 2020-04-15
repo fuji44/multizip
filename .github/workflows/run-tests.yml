@@ -22,6 +22,8 @@ jobs:
     - name: Enable poetry
       run: |
         source $HOME/.poetry/env
+        echo $HOME
+        echo $PATH
     - name: Install dependencies modules
       run: |
         poetry install
