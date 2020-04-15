@@ -46,3 +46,11 @@ Usege
     $ mzip archive/target/directory/ -o archive/output/directory/
 
 If the -o option is omitted, the output will be in the current directory.
+
+
+Test
+====
+
+::
+
+    $ poetry run pytest
