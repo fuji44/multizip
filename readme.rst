@@ -13,8 +13,10 @@ If you run against the following target directories.
     |   ...
     +-- dir2
     |   +-- file2.txt
+    |   +-- dir3
+    |   |   +-- file3.txt
     |   ...
-    +-- file3.txt
+    +-- file4.txt
 
 A zip file will be created as shown below.
 
