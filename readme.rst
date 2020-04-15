@@ -31,7 +31,7 @@ You need to have poetry installed in advance.
 
 .. code-block:: shell
 
-    $ git clone xxx
+    $ git clone https://github.com/fuji44/multizip.git
     $ cd multizip
     $ poetry install
     $ poetry build
