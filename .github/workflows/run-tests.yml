@@ -26,7 +26,7 @@ jobs:
         echo $PATH
     - name: Install dependencies modules
       run: |
-        poetry install
+        $HOME/.poetry/bin/poetry install
     - name: Run pytest
       run: |
-        poetry run pytest
+        $HOME/.poetry/bin/poetry run pytest
