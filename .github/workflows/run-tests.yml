@@ -19,11 +19,9 @@ jobs:
     - name: Fix poetry script
       run: |
         sed -i -e 's|#!/usr/bin/env python|#!/usr/bin/env python3|g' ~/.poetry/bin/poetry
-    - name: Enable poetry
-      run: |
-        source $HOME/.poetry/env
-        echo $HOME
-        echo $PATH
+    # - name: Enable poetry
+    #   run: |
+    #     source $HOME/.poetry/env
     - name: Install dependencies modules
       run: |
         $HOME/.poetry/bin/poetry install
