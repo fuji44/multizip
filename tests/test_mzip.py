@@ -8,9 +8,9 @@ def test_get_targets():
     base_dir = Path(os.getcwd(), 'tests', 'sample2')
     result = mzip.get_dirs(base_dir)
     assert len(result) == 3
-    assert result[0] == base_dir.joinpath('テスト１')
-    assert result[1] == base_dir.joinpath('テスト２')
-    assert result[2] == base_dir.joinpath('テスト３')
+    assert base_dir.joinpath('テスト１') in result
+    assert base_dir.joinpath('テスト２') in result
+    assert base_dir.joinpath('テスト３') in result
 
 def test_create_zip(tmp_path):
     result = mzip.create_zip(
