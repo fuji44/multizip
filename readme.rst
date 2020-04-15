@@ -1,7 +1,7 @@
 Multi-Zip
 #########
 
-Create a zip file based on each directory directly under the target directory.
+This is a command line tool that creates a zip file based on each directory under the target directory.
 
 If you run against the following target directories.
 
