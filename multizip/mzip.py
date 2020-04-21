@@ -8,8 +8,12 @@ def cli(target_dir, output):
     """
     Create a separate zip file based on the directory directly under the target directory.
     """
-    for target in get_dirs(Path(target_dir)):
-        create_zip(target, output)
+    targets = get_dirs(Path(target_dir))
+    with click.progressbar(
+        targets,
+        label="Zipping directories: " + str(len(targets))) as bar:
+        for target in bar:
+            create_zip(target, output)
 
 
 def get_dirs(base_dir: Path) -> [Path]:
